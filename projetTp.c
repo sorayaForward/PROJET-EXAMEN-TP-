@@ -42,10 +42,6 @@ char FsupV[45]="C:\\Users\\HP\\Downloads\\prjttp\\FsupV.txt";
 
 
 
-
-
-
-
 //Declaration variables globales ou programme
 
 int X,i,j,k,p,et,T[40];
@@ -66,7 +62,7 @@ int Matricule,MatriculeS;
 
 
 
-/*procédure d'incertion */
+/*procÃ©dure d'incertion */
 void insertion(int y) {
 
 int NBR;
@@ -102,15 +98,12 @@ int NBR;
 
 
            fclose(fv);
-		}
-        
-       
+    }
 }
      
      
 else {
-	 
-     
+	      
        if(y==2){
        	
        	 printf("Nombre de clients a ajouter?\n");
@@ -118,7 +111,6 @@ else {
 	
     for(X=1;X<=NBR;X++)
       {
-		
 		
 		fc=fopen(Fclient,"a");
 		
@@ -141,11 +133,8 @@ else {
           //  fprintf(fc,"~~ client %d ~~\n",j);
             fprintf(fc,"%d\t%s\t%s\t%d\n",B.numeroClient,B.nom,B.prenom,B.numeroTelephone);
 
-		//	fprintf(fc,"____________________________________________________________\n");
-
-
-	 
-        
+		//fprintf(fc,"____________________________________________________________\n");
+       
            fclose(fc);
        }
  }
@@ -154,8 +143,7 @@ else {
 	
 else {
 	
-	
-	
+		
 	  if(y==3){
 	  	
 	  	 printf("Nombre de locations a ajouter?\n");
@@ -180,14 +168,11 @@ else {
 			
             printf("***********************\n");
         
-		  //  fprintf(fl,"~~ Location %d ~~\n",k);
+		  //fprintf(fl,"~~ Location %d ~~\n",k);
 
 			fprintf(fl,"%d\t%d\t%s\n",C.matriculeVoiture,C.numeroClient,C.dateLocation);
-		//	fprintf(fl,"____________________________________________________________\n");
-
-		
-		
-        
+		//fprintf(fl,"____________________________________________________________\n");
+       
         fclose(fl);
 		}
 }
@@ -246,7 +231,7 @@ else{
 
 
 
-/*Procédure de recherche*/
+/*ProcÃ©dure de recherche*/
 
 
 	void recherche(int y) {
@@ -558,7 +543,7 @@ void suppresion ( int y,int T[40],int NBR){
 
 
 	
-//Procedure Mise A Jour 
+//Procedure Mise A Jour there's a probleme with this function it doesn't work! 
 
 void miseAjour(){
 	
@@ -587,9 +572,7 @@ while(fscanf(fr,"%d %d %s %s",&D.matriculeVoiture,&D.numeroClient,D.dateReservat
 		fprintf(fl,"%d\t%d\t%s\n",D.matriculeVoiture,D.numeroClient,date);	
 		
 		suppresion(4,T,1);
-		
-		
-		
+	
 	}else {
 	
 	
@@ -615,8 +598,6 @@ while(fscanf(fr,"%d %d %s %s",&D.matriculeVoiture,&D.numeroClient,D.dateReservat
 	
 		}
 	
-	
-
 
 
 int main ()
@@ -638,18 +619,13 @@ do{
  scanf("%d",&boo);
 
 
-
-
-
  
  if (boo==1){
  
 	printf("> Dans quel fichier voulez vous incerer?\n");
 	printf("1 :Fvoiture\n2 :Fclient\n3 :Flocation\n4 :Freservation\n");
 	scanf("%d",&y);
- 
- 
- insertion(y);
+        insertion(y);
  
  printf("> Les elements sont bien incerer\n");
  };
@@ -741,25 +717,7 @@ if(boo==4){
 
 
 
-}while(boo!=0);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+} while(boo!=0);
 
 
 	return 0;
